@@ -23,12 +23,12 @@ setup_options = dict(
     cmdclass={'build_ext': build_ext},
     ext_modules=[
         Extension("seqlearn._decode.bestfirst",
-                  ["seqlearn/_decode/bestfirst.pyx"]),
-        Extension("seqlearn._decode.viterbi", ["seqlearn/_decode/viterbi.pyx"]),
-        Extension("seqlearn._utils.ctrans", ["seqlearn/_utils/ctrans.pyx"]),
-        Extension("seqlearn._utils.safeadd", ["seqlearn/_utils/safeadd.pyx"]),
+                  ["seqlearn/_decode/bestfirst.c"]),
+        Extension("seqlearn._decode.viterbi", ["seqlearn/_decode/viterbi.c"]),
+        Extension("seqlearn._utils.ctrans", ["seqlearn/_utils/ctrans.c"]),
+        Extension("seqlearn._utils.safeadd", ["seqlearn/_utils/safeadd.c"]),
         Extension("seqlearn._inference.forward_backward",
-                  ["seqlearn/_inference/forward_backward.pyx"],
+                  ["seqlearn/_inference/forward_backward.c"],
                   libraries=["m"]),
     ],
 )
